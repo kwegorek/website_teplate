@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <title>Document</title>
+  <style>
+    body {
+      font-size: 14px;
+      line-height: 1em;
+      margin: 0;
+      font-family: 'Roboto Slab', serif;
+      /* font-family: 'Roboto', sans-serif; */
+      overflow: hidden;
+      overflow-y: scroll;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul li {
+      padding: 15px 10px;
+      padding-left: 100px;
+    }
+
+    ul li a {
+      color: white;
+      line-height: 1.5em;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: no-wrap;
+      align-items: flex-end;
+      justify-content: flex-end;
+      background-color: #1b242f;
+      color: white;
+      font-size: 17px;
+      padding-right: 100px;
+    
+      text-transform: uppercase;
+      margin: 0;
+      list-style: none;
+    }
+
+    img{
+        height: 30%;
+        width:100%
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    //with JSX
+    // class Navbar extends React.Component {
+    //   render() {
+    //     return <div><ul><li>About</li><li>Contact</li></ul></div>;
+    //   }
+    // }
+
+    var navElement = React.createElement(
+      'div', {},
+      React.createElement('nav', {}),
+      React.createElement(
+        'ul', {},
+        React.createElement(
+          'li', {
+            className: 'nav-item'
+          },
+          React.createElement('a', {
+            href: '#'
+          }, 'About')
+        ),
+        React.createElement(
+          'li', {
+            className: 'nav-item'
+          },
+          React.createElement('a', {
+            href: '#'
+          }, 'Contact')
+        )
+      )
+    )
+
+    var imgElement = React.createElement(
+      'div', {},
+      React.createElement('div', {className:'banner'}),React.createElement('img', {
+            src: './board.jpg'
+          }, )
+
+    )
+
+
+    var downloadBtn= React.createElement(
+      'div', {},
+      React.createElement('div', {className:'downloadBtn'}),React.createElement('button', {
+            
+          },'Download' )
+
+    )
+
+    class Navbar extends React.Component {
+      render() {
+        return navElement
+      }
+    }
+
+    class Banner extends React.Component {
+      render() {
+        return imgElement
+      }
+    }   
+    
+    class Btn extends React.Component {
+      render() {
+        return downloadBtn
+      }
+    }
+
+
+
+
+
+    var main = React.createElement(
+      'div', {},
+      React.createElement(Navbar, null),
+      React.createElement(Banner, null),
+      React.createElement(Btn, null)
+    )
+
+    class App extends React.Component {
+      render() {
+        return main
+      }
+    }
+
+    ReactDOM.render(
+      React.createElement(App, null),
+      document.getElementById('root')
+    )
+
+  </script>
+</body>
+
+</html>
