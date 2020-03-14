@@ -5,7 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
   <title>Document</title>
   <style>
@@ -13,27 +17,27 @@
       font-size: 14px;
       line-height: 1em;
       margin: 0;
-      font-family: 'Roboto Slab', serif;
-      /* font-family: 'Roboto', sans-serif; */
+   
+      font-family: 'Roboto', sans-serif;
       overflow: hidden;
       overflow-y: scroll;
     }
 
-    a {
+    li a {
       text-decoration: none;
     }
 
-    ul li {
+    .nav-bar li {
       padding: 15px 10px;
       padding-left: 100px;
     }
 
-    ul li a {
+    .nav-bar li a {
       color: white;
       line-height: 1.5em;
     }
 
-    ul {
+    .nav-bar  {
       display: flex;
       flex-wrap: no-wrap;
       align-items: flex-end;
@@ -50,8 +54,156 @@
 
     img{
         height: 30%;
-        width:100%
+        width:100%; 
+        z-index:-1;
     }
+
+    /* .download-btn{
+        height:100px; 
+
+        background-color:blue;
+        
+    } */
+
+    footer{
+        display: flex;
+      flex-wrap: no-wrap;
+      align-items: flex-end;
+      justify-content: flex-end;
+      background-color: #1b242f;
+
+    }
+
+    .banner{
+        background: url('./way.jpg') 0px 0px no-repeat;
+      z-index: -1;
+      opacity: 0.7;
+      filter: grayscale(100%);
+      width: 100%;
+      min-height: 400px;
+      display: block;
+      background-size: cover;
+      text-align: center;
+      
+   
+
+    }
+
+   .download-btn{
+        position: absolute;
+
+      
+ 
+        width:100%;
+        top:15em; 
+      
+    
+      
+    }
+
+#download-a{
+    background-color: #e74c3c;
+    width:fit-content;
+    padding:15px;
+        font-size: 20px;
+        text-align: center; 
+        display:block; 
+        margin: auto;
+      /* filter: none; */
+      padding:  1em;
+      color:white;
+      border-radius: 1px;
+     
+      text-transform: uppercase
+
+    
+}
+
+h2{
+    color:white;
+
+}
+
+.fa-drafting-compass{
+    color:black
+}
+
+.footer-list-item{
+    color:white; 
+}
+
+
+.list-items{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+ 
+
+
+}
+
+.service-item {
+    list-style: none;
+    padding:20px;
+
+
+
+   
+     color:crimson
+ 
+
+}
+
+.text-service{
+    text-align: center;
+    line-height:1.6em;
+    color: black;
+
+
+}
+
+#developement, #curiosity, #pencil{
+    color: black; 
+    font-size: 30px; 
+    text-align:center
+
+}
+
+.pic-container{
+    display:flex; 
+    justify-content: center;
+    padding:20px;
+}
+
+h1{
+    color:black; 
+    text-align: center;
+}
+
+.text-intro{
+    text-align: center;
+    padding: 20px;
+}
+
+@media screen and (max-width: 500px) {
+
+
+
+.list-items{
+    display: flex;
+    
+
+
+    flex-direction: column;
+   
+
+
+}
+
+
+
+
+}
 
   </style>
 </head>
@@ -70,7 +222,7 @@
       'div', {},
       React.createElement('nav', {}),
       React.createElement(
-        'ul', {},
+        'ul', {className:'nav-bar'},
         React.createElement(
           'li', {
             className: 'nav-item'
@@ -89,24 +241,93 @@
         )
       )
     )
-
-    var imgElement = React.createElement(
-      'div', {},
-      React.createElement('div', {className:'banner'}),React.createElement('img', {
-            src: './board.jpg'
-          }, )
-
-    )
-
-
-    var downloadBtn= React.createElement(
-      'div', {},
-      React.createElement('div', {className:'downloadBtn'}),React.createElement('button', {
+    var downloadBtn= 
+      React.createElement('div', {className:'download-btn'},React.createElement('h2', { className:'text-intro'
             
-          },'Download' )
+        },'Welcome on our site. Feel free to looak around!' ),React.createElement('a', {id:'download-a'
+            
+          },'Subscribe' ))
+
+    
+ 
+    var footer = React.createElement(
+      'footer', {},
+      React.createElement('ul', {className:'footer-list'},   React.createElement('li', {className:'footer-list-item'}, 'Copyright'),  React.createElement('li', {className:'footer-list-item'}))
 
     )
 
+       var imgElement = React.createElement(
+      'div', {},
+      React.createElement('div', {className:'banner'}),downloadBtn
+
+    )
+
+
+    var  contentElement = React.createElement(
+      'div', {},
+      React.createElement('div', {className:'container'}, ),
+      React.createElement(
+        'ul', {className: 'list-items'},
+
+        React.createElement(
+          'li', {
+            className: 'service-item'
+          },
+          React.createElement('div', {
+           className:'pic-container'}, React.createElement('i', {className:"fa fa-pencil", id:'pencil'})),
+          React.createElement('h1', {
+          }, 'Design'),
+
+          React.createElement('div', {className:'text-container'
+          },
+          
+
+          React.createElement('p', {className:'text-service'
+          }, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
+          ),
+
+        
+    ), 
+    React.createElement(
+          'li', {
+            className: 'service-item'
+          },
+          React.createElement('div', {
+           className:'pic-container'
+          }, React.createElement('i', {className:"fa fa-gears", id:'developement'})),
+          React.createElement('h1', {
+          }, 'Development'),
+
+          React.createElement('div', {className:'text-container'
+          },
+          
+
+          React.createElement('p', {className:'text-service'
+          }, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
+          ),), 
+
+
+          React.createElement(
+          'li', {
+            className: 'service-item'
+          },
+          React.createElement('div', {
+           className:'pic-container'}, React.createElement('i', {className:"fa fa-area-chart", id:'curiosity'})),
+          React.createElement('h1', {
+          }, 'Curiosity'),
+
+          React.createElement('div', {className:'text-container'
+          },
+
+          React.createElement('p', {className:'text-service'
+          }, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
+          ),
+          
+          
+          )))
+
+
+    
     class Navbar extends React.Component {
       render() {
         return navElement
@@ -119,9 +340,10 @@
       }
     }   
     
-    class Btn extends React.Component {
+
+    class Content extends React.Component {
       render() {
-        return downloadBtn
+        return contentElement
       }
     }
 
@@ -131,9 +353,11 @@
 
     var main = React.createElement(
       'div', {},
-      React.createElement(Navbar, null),
+
       React.createElement(Banner, null),
-      React.createElement(Btn, null)
+      React.createElement(Navbar, null),
+      React.createElement(Content, null),
+    
     )
 
     class App extends React.Component {
