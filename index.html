@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
   <title>Document</title>
   <style>
@@ -17,27 +14,23 @@
       font-size: 14px;
       line-height: 1em;
       margin: 0;
-   
       font-family: 'Roboto', sans-serif;
       overflow: hidden;
       overflow-y: scroll;
+      background-color: white;
     }
-
     li a {
       text-decoration: none;
     }
-
     .nav-bar li {
       padding: 15px 10px;
       padding-left: 100px;
     }
-
     .nav-bar li a {
       color: white;
       line-height: 1.5em;
     }
-
-    .nav-bar  {
+    .nav-bar {
       display: flex;
       flex-wrap: no-wrap;
       align-items: flex-end;
@@ -46,168 +39,211 @@
       color: white;
       font-size: 17px;
       padding-right: 100px;
-    
       text-transform: uppercase;
       margin: 0;
       list-style: none;
     }
-
-    img{
-        height: 30%;
-        width:100%; 
-        z-index:-1;
+    img {
+      height: 30%;
+      width: 100%;
+      z-index: -1;
     }
-
     /* .download-btn{
         height:100px; 
-
         background-color:blue;
-        
     } */
-
-    footer{
-        display: flex;
+    .footer-list {
+      display: flex;
       flex-wrap: no-wrap;
-      align-items: flex-end;
-      justify-content: flex-end;
+      align-items: center;
+      justify-content: center;
       background-color: #1b242f;
-
+      list-style: none;
+      height: 100%;
+      width: 100%;
     }
-
-    .banner{
-        background: url('./way.jpg') 0px 0px no-repeat;
+    .banner {
+      background: url('./sky.jpg') 0px 0px no-repeat;
       z-index: -1;
-      opacity: 0.7;
+      /* opacity: 0.7; */
       filter: grayscale(100%);
       width: 100%;
       min-height: 400px;
       display: block;
       background-size: cover;
       text-align: center;
-      
-   
-
+      animation: fadeIn 3s infinite;
+      animation-fill-mode: forwards;
     }
-
-   .download-btn{
-        position: absolute;
-
-      
- 
-        width:100%;
-        top:15em; 
-      
-    
-      
+    .download-btn {
+      position: absolute;
+      margin: auto;
+      width: 100%;
+      top: 10em;
     }
-
-#download-a{
-    background-color: #e74c3c;
-    width:fit-content;
-    padding:15px;
-        font-size: 20px;
-        text-align: center; 
-        display:block; 
-        margin: auto;
+    #download-a {
+      background-color: #e74c3c;
+      width: fit-content;
+      padding: 15px;
+      font-size: 20px;
+      text-align: center;
+      display: block;
+      margin: auto;
       /* filter: none; */
-      padding:  1em;
-      color:white;
+      padding: 1em;
+      color: white;
       border-radius: 1px;
-     
-      text-transform: uppercase
-
-    
-}
-
-h2{
-    color:white;
-
-}
-
-.fa-drafting-compass{
-    color:black
-}
-
-.footer-list-item{
-    color:white; 
-}
-
-
-.list-items{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
- 
-
-
-}
-
-.service-item {
-    list-style: none;
-    padding:20px;
-
-
-
-   
-     color:crimson
- 
-
-}
-
-.text-service{
-    text-align: center;
-    line-height:1.6em;
-    color: black;
-
-
-}
-
-#developement, #curiosity, #pencil{
-    color: black; 
-    font-size: 30px; 
-    text-align:center
-
-}
-
-.pic-container{
-    display:flex; 
-    justify-content: center;
-    padding:20px;
-}
-
-h1{
-    color:black; 
-    text-align: center;
-}
-
-.text-intro{
-    text-align: center;
-    padding: 20px;
-}
-
-@media screen and (max-width: 500px) {
-
-
-
-.list-items{
-    display: flex;
-    
-
-
-    flex-direction: column;
-   
-
-
-}
-
-
-
-
-}
-
+      text-transform: uppercase;
+    }
+    h2 {
+      color: white;
+    }
+    .fa-drafting-compass {
+      color: black;
+    }
+    .footer-list-item {
+      color: white;
+      /* padding-left:5px; */
+      padding-right: 10px;
+    }
+    footer {
+      margin-top: 40px;
+    }
+    .list-items {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+    }
+    .service-item {
+      list-style: none;
+      padding: 20px;
+      color: crimson;
+    }
+    .text-service {
+      text-align: center;
+      line-height: 1.6em;
+      color: black;
+    }
+    #developement,
+    #curiosity,
+    #pencil {
+      color: black;
+      font-size: 30px;
+      text-align: center;
+    }
+    .pic-container {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+    h1 {
+      color: black;
+      text-align: center;
+    }
+    #text-intro::before {
+      text-align: center;
+      padding: 20px;
+      content: 'Welcome on our site. ''Feel free to look around!';
+      white-space: pre;
+      color: white;
+      display: inline-block;
+      /* margin: auto; */
+      width: 100%;
+      line-height: 1.6em;
+    }
+    .arrow-container {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+    #angle-down {
+      font-size: 30px;
+      line-height: 1.6em;
+      margin-top: 0;
+      padding-top: 0;
+    }
+    @media screen and (max-width: 500px) {
+      .list-items {
+        display: flex;
+        flex-direction: column;
+      }
+      #text-intro::before {
+        color: white;
+        content: 'Welcome on our site. \A ''Feel free to look around!';
+        white-space: pre;
+      }
+    }
+    .services-container-title {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding-top: 40px;
+      border-bottom: 1px solid black;
+    }
+    .contact-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+    input {
+      padding: 10px;
+      margin-top: 10px;
+    }
+    textarea {
+      padding: 10px;
+      margin-top: 10px;
+      height: 100px;
+    }
+    button {
+      padding: 10px;
+      margin-top: 10px;
+    }
+    .about-text {}
+    #footer-section {
+      display: flex;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #1b242f;
+      color: white;
+      text-align: center;
+    }
+    .send-btn {
+      font-size: 15px;
+      border: 1px solid #3c763d;
+    }
+    .about-section {
+      display: flex;
+      justify-content: center;
+    }
+    .about-section_text {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      padding-top: 0;
+      line-height: 1.6em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    @keyframes fadeIn {
+      /* 10% { opacity: 0.6; }
+  20% { opacity: 0.65; }
+  40% { opacity: 0.7; }
+  60% { opacity: 0.8; } */
+      90% {
+        opacity: 0.9;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
   </style>
 </head>
-
 <body>
   <div id="root"></div>
   <script>
@@ -217,161 +253,300 @@ h1{
     //     return <div><ul><li>About</li><li>Contact</li></ul></div>;
     //   }
     // }
-
     var navElement = React.createElement(
       'div', {},
       React.createElement('nav', {}),
       React.createElement(
-        'ul', {className:'nav-bar'},
+        'ul', {
+          className: 'nav-bar'
+        },
         React.createElement(
           'li', {
             className: 'nav-item'
           },
-          React.createElement('a', {
-            href: '#'
-          }, 'About')
+          React.createElement(
+            'a', {
+              href: '#'
+            },
+            'About'
+          )
         ),
         React.createElement(
           'li', {
             className: 'nav-item'
           },
-          React.createElement('a', {
-            href: '#'
-          }, 'Contact')
+          React.createElement(
+            'a', {
+              href: '#'
+            },
+            'Contact'
+          )
         )
       )
     )
-    var downloadBtn= 
-      React.createElement('div', {className:'download-btn'},React.createElement('h2', { className:'text-intro'
-            
-        },'Welcome on our site. Feel free to looak around!' ),React.createElement('a', {id:'download-a'
-            
-          },'Subscribe' ))
-
-    
- 
+    var services = React.createElement(
+      'div', {
+        className: 'services-container-title '
+      },
+      React.createElement('h1', {
+        id: 'services-intro'
+      }, 'Services')
+    )
+    var downloadBtn = React.createElement(
+      'div', {
+        className: 'download-btn'
+      },
+      React.createElement('h2', {
+        id: 'text-intro'
+      }, ''),
+      React.createElement('a', {
+        id: 'download-a'
+      }, 'Subscribe')
+    )
     var footer = React.createElement(
-      'footer', {},
-      React.createElement('ul', {className:'footer-list'},   React.createElement('li', {className:'footer-list-item'}, 'Copyright'),  React.createElement('li', {className:'footer-list-item'}))
-
-    )
-
-       var imgElement = React.createElement(
-      'div', {},
-      React.createElement('div', {className:'banner'}),downloadBtn
-
-    )
-
-
-    var  contentElement = React.createElement(
-      'div', {},
-      React.createElement('div', {className:'container'}, ),
+      'footer', {
+        id: 'footer-section'
+      },
       React.createElement(
-        'ul', {className: 'list-items'},
-
+        'ul', {
+          className: 'footer-list'
+        },
+        React.createElement(
+          'li', {
+            className: 'footer-list-item'
+          },
+          'Copyright'
+        ),
+        React.createElement('li', {
+          className: 'footer-list-item'
+        }, '2019')
+      )
+    )
+    var imgElement = React.createElement(
+      'div', {},
+      React.createElement('div', {
+        className: 'banner '
+      }),
+      downloadBtn
+    )
+    var contactText = React.createElement(
+      'div', {
+        className: 'about-section_text'
+      },
+      React.createElement(
+        'p', {
+          className: 'contact-text-under-title'
+        },
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+      )
+    )
+    var aboutSection = React.createElement(
+      'div', {
+        className: 'about-section'
+      },
+      React.createElement(
+        'h1', {
+          className: 'about-title',
+          id: 'about'
+        },
+        'ABOUT'
+      )
+    )
+    var contactSectionTitle = React.createElement(
+      'div', {
+        className: 'contact-section-title'
+      },
+      '',
+      React.createElement(
+        'h1', {
+          className: 'about-title',
+          id: 'contact'
+        },
+        'CONTACT'
+      ),
+      contactText
+    )
+    var aboutSection_text = React.createElement(
+      'div', {
+        className: 'about-section_text'
+      },
+      React.createElement(
+        'p', {
+          className: 'about-text'
+        },
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+      ),
+      React.createElement(
+        'div', {
+          className: 'arrow-container'
+        },
+        React.createElement(
+          'a', {
+            href: '#contact'
+          },
+          React.createElement('i', {
+            className: 'fa fa-angle-down',
+            id: 'angle-down'
+          })
+        )
+      )
+    )
+    var contactSection = React.createElement(
+      'div', {
+        className: 'contact-section'
+      },
+      React.createElement('input', {
+        className: 'name-input',
+        placeholder: 'Name'
+      }),
+      React.createElement('input', {
+        className: 'email-text',
+        placeholder: 'Email'
+      }),
+      React.createElement('textarea', {
+        className: 'message-container',
+        placeholder: 'Message'
+      }),
+      React.createElement('button', {
+        className: 'send-btn'
+      }, 'Send')
+    )
+    var contentElement = React.createElement(
+      'div', {},
+      React.createElement('div', {
+        className: 'container'
+      }, services),
+      React.createElement(
+        'ul', {
+          className: 'list-items'
+        },
         React.createElement(
           'li', {
             className: 'service-item'
           },
-          React.createElement('div', {
-           className:'pic-container'}, React.createElement('i', {className:"fa fa-pencil", id:'pencil'})),
-          React.createElement('h1', {
-          }, 'Design'),
-
-          React.createElement('div', {className:'text-container'
-          },
-          
-
-          React.createElement('p', {className:'text-service'
-          }, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
-          ),
-
-        
-    ), 
-    React.createElement(
-          'li', {
-            className: 'service-item'
-          },
-          React.createElement('div', {
-           className:'pic-container'
-          }, React.createElement('i', {className:"fa fa-gears", id:'developement'})),
-          React.createElement('h1', {
-          }, 'Development'),
-
-          React.createElement('div', {className:'text-container'
-          },
-          
-
-          React.createElement('p', {className:'text-service'
-          }, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
-          ),), 
-
-
           React.createElement(
+            'div', {
+              className: 'pic-container'
+            },
+            React.createElement('i', {
+              className: 'fa fa-pencil',
+              id: 'pencil'
+            })
+          ),
+          React.createElement('h1', {}, 'Design'),
+          React.createElement(
+            'div', {
+              className: 'text-container'
+            },
+            React.createElement(
+              'p', {
+                className: 'text-service'
+              },
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+            )
+          )
+        ),
+        React.createElement(
           'li', {
             className: 'service-item'
           },
-          React.createElement('div', {
-           className:'pic-container'}, React.createElement('i', {className:"fa fa-area-chart", id:'curiosity'})),
-          React.createElement('h1', {
-          }, 'Curiosity'),
-
-          React.createElement('div', {className:'text-container'
-          },
-
-          React.createElement('p', {className:'text-service'
-          }, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
+          React.createElement(
+            'div', {
+              className: 'pic-container'
+            },
+            React.createElement('i', {
+              className: 'fa fa-gears',
+              id: 'developement'
+            })
           ),
-          
-          
-          )))
-
-
-    
+          React.createElement('h1', {}, 'Development'),
+          React.createElement(
+            'div', {
+              className: 'text-container'
+            },
+            React.createElement(
+              'p', {
+                className: 'text-service'
+              },
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+            )
+          )
+        ),
+        React.createElement(
+          'li', {
+            className: 'service-item'
+          },
+          React.createElement(
+            'div', {
+              className: 'pic-container'
+            },
+            React.createElement('i', {
+              className: 'fa fa-area-chart',
+              id: 'curiosity'
+            })
+          ),
+          React.createElement('h1', {}, 'Curiosity'),
+          React.createElement(
+            'div', {
+              className: 'text-container'
+            },
+            React.createElement(
+              'p', {
+                className: 'text-service'
+              },
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+            )
+          )
+        )
+      ),
+      React.createElement(
+        'div', {
+          className: 'arrow-container'
+        },
+        React.createElement(
+          'a', {
+            href: '#about'
+          },
+          React.createElement('i', {
+            className: 'fa fa-angle-down',
+            id: 'angle-down'
+          })
+        )
+      ),
+      React.createElement('div', {}, aboutSection, aboutSection_text),
+      React.createElement('div', {}, contactSectionTitle, contactSection),
+      footer
+    )
     class Navbar extends React.Component {
       render() {
         return navElement
       }
     }
-
     class Banner extends React.Component {
       render() {
         return imgElement
       }
-    }   
-    
-
+    }
     class Content extends React.Component {
       render() {
         return contentElement
       }
     }
-
-
-
-
-
     var main = React.createElement(
       'div', {},
-
       React.createElement(Banner, null),
       React.createElement(Navbar, null),
-      React.createElement(Content, null),
-    
+      React.createElement(Content, null)
     )
-
     class App extends React.Component {
       render() {
         return main
       }
     }
-
     ReactDOM.render(
       React.createElement(App, null),
       document.getElementById('root')
     )
-
   </script>
 </body>
-
 </html>
