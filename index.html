@@ -8,7 +8,7 @@
   <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-  <title>Document</title>
+  <title>Company</title>
   <style>
     body {
       font-size: 14px;
@@ -343,15 +343,19 @@
         'ul', {
           className: 'footer-list'
         },
+        React.createElement('li', {
+          className: 'footer-list-item'
+        }, ''), React.createElement('i', {
+            className: 'fa fa-cc footer-list-item', ariaHidden:'true',
+            id: 'angle-down'
+          }),
         React.createElement(
           'li', {
             className: 'footer-list-item'
           },
-          'Copyright'
+          ''
         ),
-        React.createElement('li', {
-          className: 'footer-list-item'
-        }, '2019')
+        
       )
     )
     var imgElement = React.createElement(
